@@ -1,0 +1,65 @@
+.banner {
+    background: url("https://kartinki.pics/uploads/posts/2021-07/1627112679_8-kartinkin-com-p-volshebnii-rinok-art-art-krasivo-8.jpg")
+        no-repeat center center/cover;
+    width: 95%;
+    aspect-ratio: 1.7;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    color: #f0f0f0; /* Светло-серый текст для лучшего контраста */
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Более темная тень для глубины */
+    position: relative;
+    background-color: #1e1e1e; /* Темный фон в случае отсутствия изображения */
+}
+
+.banner-content {
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 1%;
+    background-color: rgba(0, 0, 0, 0.6); /* Полупрозрачный темный фон для контраста */
+}
+
+.banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #eaeaea; /* Светлый цвет заголовка */
+}
+
+.banner p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #cccccc; /* Светлый цвет для абзацев */
+}
+
+.error {
+    margin: 20px;
+    width: 100%;
+    font-weight: bold;
+    color: #ff4c4c; /* Яркий красный для ошибок */
+    text-align: center;
+}
+
+.banner-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.banner-button {
+    background-color: #444444; /* Темный фон кнопки */
+    color: #ffffff; /* Белый текст */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Более насыщенная тень */
+}
+
+.banner-button:hover {
+    background-color: #666666; /* Светлее на hover */
+}

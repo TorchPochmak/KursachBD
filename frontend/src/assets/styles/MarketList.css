@@ -1,0 +1,67 @@
+.market-container {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.add-market-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.market-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Для пространства между плитками */
+    gap: 20px; /* Разрыв между карточками */
+}
+.delete-market-button {
+    background-color: #8B1C1C; /* Бордовый цвет фона */
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.delete-market-button:hover {
+    background-color: #8B1C1C; /* Более темный бордовый при наведении */
+}
+.market-card {
+    background-color: #003b51;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 0 1 calc(33.33% - 20px); /* Три карточки в строку с учётом gap */
+    max-width: 300px; /* Убедитесь, что карточка не превышает этот размер */
+    box-sizing: border-box; /* Учёт padding и border в общей ширине */
+}
+
+.market-id-button {
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.market-id-button:hover {
+    text-decoration: underline;
+}
+
+.market-info p {
+    color: #adebff;
+}
+
+.market-image {
+    width: 250px;  /* Увеличение ширины изображения */
+    height: 200px; /* Увеличение высоты изображения */
+    margin-bottom: 10px;
+    border-radius: 5px; /* Края изображения слегка скруглены */
+}

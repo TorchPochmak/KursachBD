@@ -1,0 +1,130 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #1e1e1e; /* Темный фон */
+    color: #e0e0e0; /* Светлый текст */
+    line-height: 1.6;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+.app-nav {
+    width: 100%;
+    background-color: #292929; /* Темный для навигации */
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.nav-link {
+    color: #ffffff; /* Белый текст */
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.main-content {
+    width: 100%;
+    margin: 20px;
+    padding: 20px;
+    background-color: #2a2a2a; /* Темный для основного контента */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Более темные тени */
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #f0f0f0; /* Светлый заголовок */
+}
+
+button {
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #444444; /* Темный фон кнопки */
+    color: #ffffff; /* Белый текст */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin: 2px;
+}
+
+button:hover {
+    background-color: #666666; /* Светлее на hover */
+}
+
+
+.error {
+    margin: 20px;
+    width: 100%;
+    font-weight: bold;
+    color: #ff4c4c; /* Яркий красный для ошибок */
+    text-align: center;
+}
+
+/* Product List Styles */
+.product-list {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Form Styles */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #555; /* Темная рамка */
+    background-color: #333; /* Темный input фон */
+    color: #f0f0f0; /* Светлый текст для в input */
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #292929; /* Темный для формы */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Подчеркнутая тень */
+}
+
+form button {
+    width: 100%;
+    font-weight: bold;
+    background-color: #444444;
+}
+
+form button:hover {
+    background-color: #666666;
+}

@@ -1,0 +1,84 @@
+.profile-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #444; /* Темный цвет границы */
+    border-radius: 10px;
+    background-color: #2e2e2e; /* Темный фон */
+    margin-bottom: 40px;
+    color: #e0e0e0; /* Светлый цвет текста */
+}
+
+.profile-field {
+    margin-bottom: 15px;
+}
+
+.profile-field label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #f0f0f0; /* Светлый цвет текста */
+}
+
+.field-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.field-container input {
+    flex: 1;
+    padding: 8px;
+    margin-right: 10px;
+    background-color: #3f3f3f; /* Темный фон input */
+    color: #f0f0f0; /* Светлый цвет текста input */
+    border: 1px solid #555; /* Темная граница */
+    border-radius: 4px;
+}
+
+.field-container button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #c19a6b; /* Светло-коричневый цвет */
+}
+
+.field-container button:hover {
+    color: #d3b185; /* Более светлый оттенок на hover */
+}
+
+.submit-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #444444; /* Темный фон кнопки */
+    color: #ffffff; /* Белый текст */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #666666; /* Светлее на hover */
+}
+
+.edit-button:hover svg {
+    color: #d3b185; /* Светлый цвет для иконок на hover */
+}
+
+.edit-button:hover {
+    background-color: rgba(100, 80, 73, 0.3); /* Темное выделение при наведении */
+}
+
+.error {
+    margin: 20px;
+    width: 100%;
+    font-weight: bold;
+    color: #ff4c4c; /* Яркий красный для ошибок */
+    text-align: center;
+}

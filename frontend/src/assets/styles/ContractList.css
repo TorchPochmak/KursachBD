@@ -1,0 +1,74 @@
+.contracts-container {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #2e2e2e; /* Темно-серый фон */
+    border-radius: 8px;
+    color: #f5f5f5; /* Светло-серый текст */
+}
+
+.new-contract-form {
+    background-color: #3c3c3c; /* Насыщенный тёмно-серый для формы */
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.new-contract-form h2 {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.new-contract-form input {
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #555555; /* Темноватый для полей ввода */
+    color: #ffffff;
+}
+
+.add-contract-button {
+    background-color: #5a5aff; /* Нежный синий для кнопки добавления */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contracts-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.contract-card {
+    background-color: #3c3c3c; /* Тот же насыщенный тёмно-серый */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Лёгкая тень для объёма */
+    width: calc(50% - 10px); /* Две карточки в строке */
+    color: #f5f5f5; /* Светло-серый текст */
+}
+
+.contract-info p {
+    margin: 5px 0;
+}
+
+.delete-contract-button {
+    background-color: #bb2124; /* Красновато-бордовый для кнопки удаления */
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+h1 {
+    color: #ffffff;
+    margin-bottom: 20px;
+}

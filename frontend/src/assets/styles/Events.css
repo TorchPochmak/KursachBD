@@ -1,0 +1,72 @@
+.events-manager {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #2e2e2e; /* Темно-серый фон */
+    border-radius: 8px;
+    color: #f5f5f5; /* Светло-серый текст */
+}
+
+.new-event-form {
+    background-color: #3c3c3c; /* Насыщенный тёмно-серый для формы */
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.new-event-form h2 {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.new-event-form input {
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #555555; /* Темноватый фон для полей ввода */
+    color: #ffffff;
+}
+
+.new-event-form button {
+    background-color: #5a5aff; /* Нежный синий для кнопки добавления */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #3c3c3c; /* Тёмно-серый фон карточек */
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #f5f5f5;
+}
+
+ul li p {
+    margin: 5px 0;
+}
+
+ul li button {
+    background-color: #bb2124; /* Красновато-бордовый для кнопки удаления */
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+h1 {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
