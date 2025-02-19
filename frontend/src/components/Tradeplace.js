@@ -126,7 +126,7 @@ const Tradeplace = () => {
                         disabled={!isAuthenticated || userType !== "admin"}
                     />
                 </div>
-    
+                {(isAuthenticated && userType === "admin") &&
                 <button 
                     type="submit" 
                     onClick={handleSubmit} 
@@ -134,13 +134,15 @@ const Tradeplace = () => {
                 >
                     Save Changes
                 </button>
+                }
+                {(isAuthenticated && userType === "admin") &&
                 <button 
                     type="button" 
                     onClick={handleDelete} 
                     disabled={isLoading || !isAuthenticated || userType !== "admin"}
                 >
                     Delete Tradeplace
-                </button>
+                </button>}
             </form>
         </div>
     );

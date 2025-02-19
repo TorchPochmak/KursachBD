@@ -117,104 +117,6 @@ const Market = () => {
     if (!market) {
         return <p>Market not found!</p>;
     }
-
-    // return (
-    //     <div>
-    //         {isAuthenticated && userType === "admin" && (
-    //         <h1>Edit Market</h1>)}
-    //         {(!isAuthenticated || userType !== "admin") && (
-    //         <h1>View Market</h1>)}
-
-    //         <div>
-    //             <div>
-    //                 <label>ID:</label>
-    //                 <p>{market.id}</p>
-    //             </div>
-    //             <div>
-    //                 <label>Address:</label>
-    //                 <input
-    //                     type="text"
-    //                     value={market.address || ''}
-    //                     onChange={(e) => handleChange('address', e.target.value)}
-    //                 />
-    //             </div>
-    //             <div>
-    //                 <label>Name:</label>
-    //                 <input
-    //                     type="text"
-    //                     value={market.name || ''}
-    //                     onChange={(e) => handleChange('name', e.target.value)}
-    //                 />
-    //             </div>
-    //             <div>
-    //                 <label>Opened:</label>
-    //                 <input
-    //                     type="checkbox"
-    //                     checked={market.isopened || false}
-    //                     onChange={(e) => handleChange('isopened', e.target.checked)}
-    //                 />
-    //             </div>
-    //             <div>
-    //                 <label>Places Count:</label>
-    //                 <input
-    //                     type="text"
-    //                     value={market.placescount}
-    //                     onChange={(e) => handleChange('placescount', e.target.value)}
-    //                 />
-    //             </div>
-    //             <div>
-    //                 <label>Owner ID:</label>
-    //                 <input
-    //                     type="text"
-    //                     value={market.ownerid}
-    //                     onChange={(e) => handleChange('ownerid', e.target.value)}
-    //                 />
-    //             </div>
-    //             <div>
-    //                 <input
-    //                     type="file"
-    //                     id="file"
-    //                     className="file-input"
-    //                     accept="image/*"
-    //                     onChange={handleImageChange}
-    //                     ref={fileInputRef}  // Присваиваем реф
-    //                     style={{ display: 'none' }}  // Скрываем стандартное поле
-    //                 />
-    //                 <button onClick={handleButtonClick} className="file-label">
-    //                     {market.schemepng ? "Change photo" : "Choose a photo"}
-    //                 </button>
-    //             </div>
-    //             {market.schemepng  && <p className="file-name">File selected</p>}
-
-    //             {market.schemepng && 
-    //                 <img src={`data:image/png;base64,${market.schemepng}`}
-    //                 alt="scheme"
-    //                 style={{
-    //                   maxWidth: '300px',  // Ограничение по ширине
-    //                   maxHeight: '300px', // Ограничение по высоте
-    //                   width: 'auto',
-    //                   height: 'auto'
-    //                 }} />
-    //             }
-    //             <div>
-    //                 <button onClick={handleSubmit}>Save Changes</button>
-    //             </div>
-    //             <div>
-    //                 <label>Tradeplace number:</label>
-    //                 <input
-    //                     type="text"
-    //                     value={tradeplace}
-    //                     onChange={(e) => setTradeplace(e.target.value)}
-    //                 />
-    //                 <button onClick={handleTradePlace}>Edit info</button>
-    //             </div>
-    //             {error && <p className="error">{error}</p>}
-    //             {alertMessage !== "" && (
-    //                 <Alert message={alertMessage} onClose={handleAlertClose} />
-    //             )}
-    //         </div>
-    //     </div>
-    // );
     return (
         <div>
             {isAuthenticated && userType === "admin" ? (
@@ -284,9 +186,10 @@ const Market = () => {
                         style={{ display: 'none' }}
                         disabled={!isAuthenticated || userType !== "admin"}
                     />
+                    {(isAuthenticated && userType === "admin") &&
                     <button onClick={handleButtonClick} className="file-label" disabled={!isAuthenticated || userType !== "admin"}>
                         {market.schemepng ? "Change photo" : "Choose a photo"}
-                    </button>
+                    </button>}
                 </div>
                 {market.schemepng && <p className="file-name">File selected</p>}
                 {market.schemepng && 
@@ -300,9 +203,11 @@ const Market = () => {
                     }} />
                 }
                 <div>
+                    {(isAuthenticated && userType === "admin") &&
                     <button onClick={handleSubmit} disabled={!isAuthenticated || userType !== "admin"}>
                         Save Changes
                     </button>
+                    }
                 </div>
                 <div>
                     <label>Tradeplace number:</label>
@@ -310,11 +215,9 @@ const Market = () => {
                         type="text"
                         value={tradeplace}
                         onChange={(e) => setTradeplace(e.target.value)}
-                        disabled={!isAuthenticated}
                     />
                     <button 
                         onClick={handleTradePlace} 
-                        disabled={!isAuthenticated}
                     >
                         {isAuthenticated && userType === "admin" ? "Edit Info" : "View Info"}
                     </button>

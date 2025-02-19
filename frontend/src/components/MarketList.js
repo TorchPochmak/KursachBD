@@ -61,13 +61,14 @@ const MarketList = () => {
 
     return (
         <div className="market-container">
+            {(isAuthenticated && userType === "admin") &&
             <button 
                 className="add-market-button" 
                 onClick={handleCreateMarket} 
                 disabled={!isAuthenticated || userType !== "admin"}
             >
                 Add Default Market
-            </button>
+            </button>}
             <div>
                 <h1>Markets</h1>
                 {markets.length === 0 ? (
@@ -96,13 +97,14 @@ const MarketList = () => {
                                     <p><strong>ID:</strong> {market.id}</p>
                                     <p><strong>Owner ID:</strong> {market.ownerid}</p>
                                 </div>
+                                {(isAuthenticated && userType === "admin") &&
                                 <button
                                     className="delete-market-button"
                                     onClick={() => handleDeleteMarket(market.id)}
                                     disabled={!isAuthenticated || userType !== "admin"}
                                 >
                                     Delete Market
-                                </button>
+                                </button>}
                             </div>
                         ))}
                     </div>

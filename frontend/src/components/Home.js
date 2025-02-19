@@ -1,6 +1,6 @@
 import React from "react";
 import "../assets/styles/Home.css";
-import { FaPaw, FaSignInAlt, FaGamepad } from "react-icons/fa";
+import { FaSignInAlt, FaGamepad } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { CiStar } from "react-icons/ci";
 import { useAuth } from "../contexts/AuthContext";
@@ -36,7 +36,7 @@ const Home = () => {
                         onClick={() => navigate("/markets")}
                         className="banner-button"
                     >
-                        <FaGamepad /> Let's make your first contract!
+                        <CiStar /> Let's make your first contract!
                     </button>
                     <LoginButton />
                 </div>
