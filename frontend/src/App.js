@@ -14,6 +14,7 @@ import MarketList from "./components/MarketList.js";
 import Tradeplace from "./components/Tradeplace.js";
 import ContractsList from "./components/ContractList.js";
 import Events from "./components/Events.js";
+import Search from "./components/Search.js";
 
 const App = () => {
     return (
@@ -31,12 +32,11 @@ const App = () => {
                     <Route path="/login" element={<Login />} />
                     <Route path="/register" element={<Register />} />
 
-                    <Route path="/search" element={<Market />}/>
-
                     <Route path="/profile" element={<Profile />} />
                     <Route path="/mail" element={<MessageForm />} />
 
                     <Route path="/events" element={<Events/>}/>
+                    <Route path="/search" element={<Search/>}/>
                 </Routes>
             </div>
         </div>

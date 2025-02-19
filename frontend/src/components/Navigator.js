@@ -7,7 +7,8 @@ import {
     FaSignOutAlt,
     FaUser,
     FaArrowRight,
-    FaFileContract
+    FaFileContract,
+    FaSearch 
 } from "react-icons/fa";
 import { MdOutlineBackup } from "react-icons/md";
 import { backup } from "../utils/Fetch/BackupsF";
@@ -74,7 +75,9 @@ export const getNavigateMenu = () => {
             <MdOutlineBackup /> Make backup
             </Link>
         )}
-        
+        <Link to="/search" className="nav-link" >
+        <FaSearch /> Search
+        </Link>
         {!isAuthenticated && (
             <Link to="/login" className="nav-link" >
             <FaSignInAlt /> Login

@@ -1,10 +1,7 @@
 //!done
-export const getProfile = async (token) => {
-    const response = await fetch("/profile/get", {
-        method: "GET",
-        headers: {
-            Authorization: `Bearer ${token}`,
-        },
+export const getProfile = async (user_id) => {
+    const response = await fetch(`/profile/get/${user_id}`, {
+        method: "GET"
     });
 
     if (!response.ok) {

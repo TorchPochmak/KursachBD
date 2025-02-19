@@ -81,18 +81,11 @@ async def register(user: models.RegisterRequest):
 #--------------------------------------------------------------------------------------  
 # PROFILE 
 #--------------------------------------------------------------------------------------  
-@app.get("/profile/get", response_model=models.UserInfo)
-async def profile_get(credentials: HTTPAuthorizationCredentials = Depends(auth_scheme)):
-    try:
-        token = credentials.credentials
-        user = auth_service._AuthService__decode_token(token)  # Расшифровываем токен
-    except Exception:
-        raise HTTPException(status_code=401, detail="Invalid token")
+@app.get("/profile/get/{user_id}", response_model=models.UserInfo)
+async def profile_get(user_id: int):
     async with db.pool.acquire() as conn:
         try:
-            print(conn)
-            print(user['user_id'])
-            user = await db.get_user_data_by_id(conn, user['user_id'])
+            user = await db.get_user_data_by_id(conn, user_id)
             return db.create_user_info(user)
         except Exception as e:
             raise HTTPException(status_code=500, detail=f"profile_get error: {str(e)}")

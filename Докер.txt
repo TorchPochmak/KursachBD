@@ -1,3 +1,5 @@
 docker compose down -v
 docker compose up --build --force-recreate
-python filling.py
+python initfile.py
+Ctrl+C
+docker compose up --build --force-recreate

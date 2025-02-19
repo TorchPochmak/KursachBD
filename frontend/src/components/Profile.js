@@ -48,7 +48,7 @@ const Profile = () => {
         const fetchData = async () => {
             setLoading(true);
             try {
-                const data = await getProfile(token);
+                const data = await getProfile(userId);
                 setProfile(data);
             } catch (err) {
                 setError(err.message);
